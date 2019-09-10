@@ -9,7 +9,7 @@ elif number >= 0:
 
 
 if lastDig == 0:
-    print("Last digit of {: d} is {: d} and is 0" .format(number, lastDig))
+    print("Last digit of {: d} is {} and is 0" .format(number, lastDig))
 
 elif lastDig > 5:
     print("Last digit of {: d} is {: d} and is greater than 5"\
