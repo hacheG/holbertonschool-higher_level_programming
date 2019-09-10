@@ -9,12 +9,12 @@ elif number >= 0:
 
 
 if lastDig == 0:
-    print('Last digit of {} is {} and is 0' .format(number, lastDig))
+    print('Last digit of {} is {} and is 0'.format(number, lastDig))
 
 elif lastDig > 5:
-    print('Last digit of {} is {} and is greater than 5'\
-.format(number, lastDig))
+    print('Last digit of {} is {} and is greater than 5'.format(number, \
+lastDig))
 
 elif lastDig < 6:
-    print('Last digit of {} is {} and is less than 6 \
-and not 0' .format(number, lastDig))
+    print('Last digit of {} is {} and is less than 6 and not 0' .format(number,\
+ lastDig))
