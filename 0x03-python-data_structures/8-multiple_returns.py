@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    leng = (len(sentence))
-
-    if leng is None:
-        return(leng, None)
+    s = len(sentence)
+    if s == 0:
+        x = None
     else:
-        fst_lettr = sentence[0]
-        return(leng, fst_lettr)
+        x = sentence[0]
+    e = (s, x)
+    return(e)
