@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-class Square():
 
+
+class Square():
+    """Class Square, manage validation"""
     def __init__(self, size=0):
         if size != int(size):
             raise TypeError("size must be an integer")
