@@ -11,13 +11,13 @@ class Square():
         return self.__size
 
     @size.setter
-    def size(self, x):
-        if not str(x).isdigit():
+    def size(self, value):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if x < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
 
-        self.__size = x
+        self.__size = value
 
     def area(self):
-        return (self.__size * self.__size)
+        return self.__size * self.__size
