@@ -1,3 +1,12 @@
+    The ``example`` module
+======================
+
+Using ``factorial``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``factorial`` from the ``example`` module:
+
 >>> text_indentation = __import__("5-text_indentation").text_indentation
 
 Now use it:
