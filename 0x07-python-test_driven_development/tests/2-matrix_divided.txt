@@ -1,3 +1,12 @@
+   The ``example`` module
+======================
+
+Using ``factorial``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``factorial`` from the ``example`` module:
+
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
     
     >>> matrix_divided([[1,2,3],[4,5,6]], 3)
