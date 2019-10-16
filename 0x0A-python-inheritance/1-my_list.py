@@ -13,4 +13,3 @@ class MyList(list):
         begin function - print_sorted
         """
         print("{}".format(sorted(self)))
-

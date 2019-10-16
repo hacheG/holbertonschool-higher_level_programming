@@ -22,4 +22,3 @@ class Rectangle(BaseGeometry):
         Print the area
         """
         return self.__width * self.__height
-

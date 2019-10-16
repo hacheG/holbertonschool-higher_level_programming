@@ -21,4 +21,3 @@ class Square(Rectangle):
         begin function - area
         """
         return self.__size * self.__size
-

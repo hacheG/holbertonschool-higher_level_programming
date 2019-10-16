@@ -14,4 +14,3 @@ class MyInt(int):
         if self > y or self < y:
             return False
         return True
-
