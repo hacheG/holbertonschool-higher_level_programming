@@ -16,4 +16,3 @@ class BaseGeometry:
         Base area function
         """
         raise Exception("area() is not implemented")
-

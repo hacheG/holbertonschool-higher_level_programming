@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Begin program - python
+begin program - python
 """
 
 
@@ -14,3 +14,11 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
+    def __str__(self):
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+    def area(self):
+        """
+        Print the area
+        """
+        return self.__width * self.__height
