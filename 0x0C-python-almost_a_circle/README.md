@@ -20,3 +20,13 @@ The AirBnB project is a big part of the Higher level curriculum. This project wi
    args and kwargs
    Serialization/Deserialization  
    JSON  
+
+***
+
+## Tasks
+
+| Number        | Do           | link  |
+| ------------- |:-------------:| -----:|
+| 0. If it's not tested it doesn't work  | All your files, classes and methods must be unit tested and be PEP 8 validated.  | [repo link](https://github.com/hacheG/holbertonschool-higher_level_programming/tree/master/0x0C-python-almost_a_circle) |
+| 1. Base class  |Write the first class Base  |   |
+| 2. First Rectangle  | Write the class Rectangle that inherits from Base|  |
