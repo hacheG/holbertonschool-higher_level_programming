@@ -28,19 +28,19 @@ class BaseTest(unittest.TestCase):
         self.assertNotEqual(b.id, 'a')
 
     def test_02_(self):
-    """Test for custom id."""
-    b = Base(98)
-    self.assertEqual(b.id, 98)
+        """Test for custom id."""
+        b = Base(98)
+        self.assertEqual(b.id, 98)
 
     def test_03_(self):
         """Test for no id after a custom entry."""
         b = Base()
-        self.assertEqual(b.id, 1)
+        self.assertEqual(b.id, 2)
 
     def test_04_(self):
         """Test for None input."""
         b = Base(None)
-        self.assertEqual(b.id, 1)
+        self.assertEqual(b.id, 3)
 
     def test_05_(self):
         """Test for zero input."""
@@ -80,8 +80,6 @@ class BaseTest(unittest.TestCase):
     def test_12_(self):
         b = Base()
         self.assertEqual(b.to_json_string(None), "[]")
-#        res = Base.to_json_string(None)
-#        self.assertEqual(res, "[]")
     
     def test_27a_save_to_file_no_args(self):
         """Test for no args in save_to_file."""
@@ -90,3 +88,5 @@ class BaseTest(unittest.TestCase):
         self.assertEqual("save_to_file() missing 1 required positional " +
                          "argument: 'list_objs'", str(e.exception))
         
+if __name__ == '__main__':
+    unittest.main()
