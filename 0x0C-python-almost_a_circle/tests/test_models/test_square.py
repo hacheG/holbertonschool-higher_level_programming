@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Unittest - python3
 """
@@ -8,6 +7,10 @@ import unittest
 from models.square import Square
 from models.rectangle import Rectangle
 from models.base import Base
+"""
+Unittest - python3
+"""
+
 
 class SquareTest(unittest.TestCase):
     """Unittest - python3"""

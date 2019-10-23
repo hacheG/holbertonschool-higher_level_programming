@@ -17,7 +17,7 @@ class BaseTest(unittest.TestCase):
     def test_00_(self):
         """Unittest - python3"""
         self.assertEqual(Base.__nb_objects, 0)
-    
+
     def test_01_(self):
         b = Base()
         b1 = Base(12)
@@ -80,13 +80,13 @@ class BaseTest(unittest.TestCase):
     def test_12_(self):
         b = Base()
         self.assertEqual(b.to_json_string(None), "[]")
-    
+
     def test_27a_save_to_file_no_args(self):
         """Test for no args in save_to_file."""
         with self.assertRaises(TypeError) as e:
             res = Base.save_to_file()
         self.assertEqual("save_to_file() missing 1 required positional " +
                          "argument: 'list_objs'", str(e.exception))
-        
+
 if __name__ == '__main__':
     unittest.main()
