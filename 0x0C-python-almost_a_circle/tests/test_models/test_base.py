@@ -19,7 +19,7 @@ class BaseTest(unittest.TestCase):
         self.assertEqual(Base.__nb_objects, 0)
 
     def test_01_(self):
-    	"""begin program - python3"""
+        """begin program - python3"""
         b = Base()
         b1 = Base(12)
         self.assertEqual(b.__nb_objects, 0)
@@ -88,7 +88,7 @@ class BaseTest(unittest.TestCase):
             res = Base.save_to_file()
         self.assertEqual("save_to_file() missing 1 required positional " +
                          "argument: 'list_objs'", str(e.exception))
-"""comment"""
+    """comment"""
     def test_00_correct_id(self):
         """Test for correct id attribute."""
         b1 = Base()

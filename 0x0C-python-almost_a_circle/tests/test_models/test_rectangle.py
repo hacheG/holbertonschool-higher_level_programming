@@ -54,7 +54,7 @@ class RectangleTest(unittest.TestCase):
         self.assertEqual(r.height, 66)
         self.assertEqual(r.x, 151)
         self.assertEqual(r.y, 44)
-"""comment"""
+    """comment"""
     def tearDown(self):
         if os.path.exists("Base.json"):
             os.remove("Base.json")
@@ -502,9 +502,9 @@ class RectangleTest(unittest.TestCase):
         """Test for no args in save_to_file"""
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file()
-        self.assertEqual("save_to_file() missing 1 required positional" +
-                " argument: 'list_objs'",
-                str(e.exception))
+        a = "save_to_file() missing 1 required positional"
+        b = " argument: 'list_objs'"
+        self.assertEqual(a + b, str(e.exception))
 
     def test_34_from_json_string(self):
         """Test for from_json_string method."""
@@ -600,9 +600,8 @@ class RectangleTest(unittest.TestCase):
         """Test for load_from_files."""
         with self.assertRaises(TypeError) as e:
             rect_list = Rectangle.load_from_file("Rectangle.json")
-        self.assertEqual(
-            "load_from_file() takes 1 positional argument but 2 were given", str(
-                e.exception))
+        c = "load_from_file() takes 1 positional argument but 2 were given"
+        self.assertEqual(c, str(e.exception))
 
     def test_45_save_to_csv(self):
         """Test for save_to_csv."""

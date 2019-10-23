@@ -57,7 +57,7 @@ class SquareTest(unittest.TestCase):
         self.assertEqual(r3.height, 4)
         self.assertEqual(r3.x, 51)
         self.assertEqual(r3.y, 96)
-"""comment"""
+    """comment"""
     def tearDown(self):
         if os.path.exists("Base.json"):
             os.remove("Base.json")
@@ -466,8 +466,9 @@ class SquareTest(unittest.TestCase):
         r1 = Square(10, 7, 2)
         r2 = Square(2, 4)
         Square.save_to_file([r1, r2])
-        res = '[{"x": 7, "y": 2, "size": 10, "id": 1},' + \
-                ' {"x": 4, "y": 0, "size": 2, "id": 2}]'
+        e = '[{"x": 7, "y": 2, "size": 10, "id": 1},'
+        f = ' {"x": 4, "y": 0, "size": 2, "id": 2}]'
+        res = e + f
         with open("Square.json", "r") as file:
             self.assertEqual(len(file.read()), len(res))
 
