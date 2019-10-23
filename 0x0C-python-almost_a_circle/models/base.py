@@ -14,17 +14,21 @@ class Base:
 
 	@staticmethod
 	def to_json_string(list_dictionaries):
+		if list_dictionaries is None or list_dictionaries == []:
+			return "[]"
 		if not isinstance(list_dictionaries, list):
 			raise TypeError("list_dictionaries must be a list")
-		elif list_dictionaries is None or list_dictionaries == []:
-			return "[]"
+		if isinstance(list_dictionaries, list):
+			for i in range(len(list_dictionaries)):
+				if not isinstance(list_dictionaries[i], dict):
+					raise TypeError("list_dictionaries must contain dictionaries")
 		else:
 			return json.dumps(list_dictionaries)
 
 	@classmethod
 	def save_to_file(cls, list_objs):
 		if not isinstance(list_objs, list):
-			raise TypeError("list_objs must be a list")
+			raise TypeError("list_objs must be list")
 		if list_objs is None or list_objs == []:
 			emptyList = []
 		else:
