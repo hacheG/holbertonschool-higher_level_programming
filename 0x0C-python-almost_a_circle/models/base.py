@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+    	"""begin program - python3"""
         if id is not None:
             self.id = id
         else:
@@ -17,6 +18,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+    	"""begin program - python3"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         if not isinstance(list_dictionaries, list):
@@ -31,6 +33,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+    	"""begin program - python3"""
         if not isinstance(list_objs, list):
             raise TypeError("list_objs must be list")
         if list_objs is None or list_objs == []:
@@ -43,6 +46,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+    	"""begin program - python3"""
         if not isinstance(json_string, str):
             raise TypeError("json_string must be a string")
         if json_string is None or json_string == "":
@@ -53,6 +57,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+    	"""begin program - python3"""
         if cls.__name__ == "Rectangle":
             a = cls(2, 4, 6, 8, 10)
             a.update(**dictionary)

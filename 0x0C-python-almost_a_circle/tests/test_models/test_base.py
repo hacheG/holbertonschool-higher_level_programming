@@ -19,6 +19,7 @@ class BaseTest(unittest.TestCase):
         self.assertEqual(Base.__nb_objects, 0)
 
     def test_01_(self):
+    	"""begin program - python3"""
         b = Base()
         b1 = Base(12)
         self.assertEqual(b.__nb_objects, 0)
