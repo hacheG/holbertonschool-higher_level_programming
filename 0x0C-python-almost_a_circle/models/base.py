@@ -70,6 +70,3 @@ class Base:
 		for d in dicts:
 			res.append(cls.create(**d))
 		return res
-	
-
-
