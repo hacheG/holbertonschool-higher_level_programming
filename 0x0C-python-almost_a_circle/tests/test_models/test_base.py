@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
 """
-Unittest - python3
+Unittest for models/base.py
 """
 
 import unittest
+import os
 from models.base import Base
 
 
 class BaseTest(unittest.TestCase):
-    """Unittest - python3"""
+    """Tests for base class."""
 
     def setUp(self):
-        Base.__nb_objects = 0
+        Base._Base__nb_objects = 0
 
     def test_00_correct_id(self):
         """Test for correct id attribute."""

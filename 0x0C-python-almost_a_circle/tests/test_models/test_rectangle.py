@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Unittest - python3
+Unittest for models/rectangle.py
 """
 
 import sys
@@ -14,7 +14,7 @@ from models.base import Base
 
 
 class RectangleTest(unittest.TestCase):
-    """Unittest - python3"""
+    """Tests for rectangle class."""
 
     def setUp(self):
         Base._Base__nb_objects = 0
@@ -466,9 +466,9 @@ class RectangleTest(unittest.TestCase):
         """Test for no args in save_to_file"""
         with self.assertRaises(TypeError) as e:
             Rectangle.save_to_file()
-        a = "save_to_file() missing 1 required positional"
-        b = " argument: 'list_objs'"
-        self.assertEqual(a + b, str(e.exception))
+        self.assertEqual("save_to_file() missing 1 required positional" +
+                " argument: 'list_objs'",
+                str(e.exception))
 
     def test_34_from_json_string(self):
         """Test for from_json_string method."""
@@ -564,8 +564,9 @@ class RectangleTest(unittest.TestCase):
         """Test for load_from_files."""
         with self.assertRaises(TypeError) as e:
             rect_list = Rectangle.load_from_file("Rectangle.json")
-        c = "load_from_file() takes 1 positional argument but 2 were given"
-        self.assertEqual(c, str(e.exception))
+        self.assertEqual(
+            "load_from_file() takes 1 positional argument but 2 were given", str(
+                e.exception))
 
     def test_45_save_to_csv(self):
         """Test for save_to_csv."""

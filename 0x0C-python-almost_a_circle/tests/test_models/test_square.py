@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+
 """
-Unittest - python3
+Unittest for models/square.py
 """
 
 import sys
@@ -11,13 +12,13 @@ import contextlib
 from models.square import Square
 from models.rectangle import Rectangle
 from models.base import Base
-"""
-Unittest - python3
-"""
 
 
 class SquareTest(unittest.TestCase):
-    """Unittest - python3"""
+    """Tests for square class."""
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
 
     def tearDown(self):
         if os.path.exists("Base.json"):
@@ -427,9 +428,8 @@ class SquareTest(unittest.TestCase):
         r1 = Square(10, 7, 2)
         r2 = Square(2, 4)
         Square.save_to_file([r1, r2])
-        e = '[{"x": 7, "y": 2, "size": 10, "id": 1},'
-        f = ' {"x": 4, "y": 0, "size": 2, "id": 2}]'
-        res = e + f
+        res = '[{"x": 7, "y": 2, "size": 10, "id": 1},' + \
+                ' {"x": 4, "y": 0, "size": 2, "id": 2}]'
         with open("Square.json", "r") as file:
             self.assertEqual(len(file.read()), len(res))
 
@@ -488,7 +488,6 @@ class SquareTest(unittest.TestCase):
         """Test for two args in save_to_file"""
         with self.assertRaises(TypeError):
             Square.save_to_file([], 6)
-
 
 if __name__ == '__main__':
     unittest.main()
