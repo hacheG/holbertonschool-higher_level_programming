@@ -1,99 +1,111 @@
 #!/usr/bin/python3
+
+"""
+begin program - python cry
+"""
+
 from models.base import Base
+import json
+
 
 class Rectangle(Base):
-	"""begin program - python3"""
+    """begin program - python cry"""
 
-	def __init__(self, width, height, x=0, y=0, id=None):
-		super().__init__(id)
-		self.width = width
-		self.height = height
-		self.x = x
-		self.y = y
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """begin program - python cry"""
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
-	@property
-	def width(self):
-		return self.__width
+    @property
+    def width(self):
+        """begin program - python cry"""
+        return self.__width
 
-	@width.setter
-	def width(self, width):
-		if not isinstance(width, int):
-			raise TypeError("width must be an integer")
-		if width <= 0:
-			raise ValueError("width must be > 0")
-		self.__width = width
+    @property
+    def height(self):
+        """Gbegin program - python cry"""
+        return self.__height
 
-	@property
-	def height(self):
-		return self.__height
+    @property
+    def x(self):
+        """begin program - python cry"""
+        return self.__x
 
-	@height.setter
-	def height(self, height):
-		if not isinstance(height, int):
-			raise TypeError("height must be an integer")
-		if height <= 0:
-			raise ValueError("height must be > 0")
-		self.__height = height
+    @property
+    def y(self):
+        """Gbegin program - python cry"""
+        return self.__y
 
-	@property
-	def x(self):
-		return self.__x
+    @width.setter
+    def width(self, width):
+        """begin program - python cry"""
+        if type(width) != int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = width
 
-	@x.setter
-	def x(self, x):
-		if not isinstance(x, int):
-			raise TypeError("x must be an integer")
-		if x < 0:
-			raise ValueError("x must be >= 0")
-		self.__x = x
+    @height.setter
+    def height(self, height):
+        """begin program - python cry"""
+        if type(height) != int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = height
 
-	@property
-	def y(self):
-		return self.__y
+    @x.setter
+    def x(self, x):
+        """begin program - python cry"""
+        if type(x) != int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = x
 
-	@y.setter
-	def y(self, y):
-		if not isinstance(y, int):
-			raise TypeError("y must be an integer")
-		if y < 0:
-			raise ValueError("y must be >= 0")
-		self.__y = y
+    @y.setter
+    def y(self, y):
+        """begin program - python cry"""
+        if type(y) != int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = y
 
-	def area(self):
-		return self.__width * self.__height
+    def area(self):
+        """begin program - python cry"""
+        return self.__height * self.__width
 
-	def display(self):
-		for space1 in range(self.__y):
-			print()
+    def display(self):
+        """begin program - python cry"""
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * self.__width)
 
-		for row in range(self.__height):
-			for space2 in range(self.__x):
-				print(" ",end="")
+    def __str__(self):
+        """begin program - python cry"""
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
 
-			for col in range(self.__width):
-				print("#", end="")
-			print()
+    def update(self, *args, **kwargs):
+        """begin program - python cry"""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i, e in enumerate(args):
+                setattr(self, attrs[i], e)
+            return
+        for k, v in kwargs.items():
+            if hasattr(self, k):
+                setattr(self, k, v)
 
-	def __str__(self):
-		a = self.id
-		b = self.__x
-		c = self.__y
-		d = self.__width
-		e = self.__height
-		f = "[Rectangle]"
-		return "{} ({:d}) {:d}/{:d} - {:d}/{:d}".format(f, a, b, c, d, e)
-
-	def update(self, *args, **kwargs):
-		if args:
-			newValue = ["id", "width", "height", "x", "y"]
-			for count, elem in enumerate(args):
-				setattr(self,newValue[count], elem)
-		for key, value in kwargs.items():
-				setattr(self, key, value)
-
-	def to_dictionary(self):
-		dic = {}
-		keyVal = vars(self)
-		for k, v in keyVal.items():
-			dic[k.split("_Rectangle__")[-1]] = v
-		return dic
+    def to_dictionary(self):
+        """begin program - python cry"""
+        d = {}
+        for k, v in vars(self).items():
+            d[k.split("__")[-1]] = v
+        return d
