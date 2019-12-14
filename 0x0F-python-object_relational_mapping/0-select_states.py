@@ -20,4 +20,4 @@ if __name__ == '__main__':
     for data in rows:
         print(data)
     cur.close()
-    db.cose()
+    db.close()
