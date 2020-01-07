@@ -1,0 +1,1 @@
+curl -sL -X GET "$1"
