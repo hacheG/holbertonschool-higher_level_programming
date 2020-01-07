@@ -1,3 +1,3 @@
 #!/bin/bash
-#onother comment without sense
-curl -sL $1
+# another comment without sense
+curl -sL "$1"
