@@ -1,3 +1,3 @@
 #!/bin/bash
 # another comment without sense
-curl -s -L "$1"
+curl -s -L -f "$1"
