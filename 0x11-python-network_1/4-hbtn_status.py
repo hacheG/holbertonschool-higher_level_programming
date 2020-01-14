@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """darling"""
 
-import urllib.request
 import requests
 
 if __name__ == "__main__":
