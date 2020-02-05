@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 function Factorial(a)
 {
     let fac = 1;
