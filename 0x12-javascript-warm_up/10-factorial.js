@@ -4,9 +4,9 @@ function Factorial (a) {
   if (a === 1) {
     return 1;
   } else {
-  for (let i=1; i<=a; i++) {
-    fac = fac * i;
-  }
+    for (let i = 1; i <= a; i++) {
+      fac = fac * i;
+    }
     return fac;
   }
 }
