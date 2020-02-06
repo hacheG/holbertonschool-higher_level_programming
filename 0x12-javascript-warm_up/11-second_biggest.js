@@ -1,7 +1,2 @@
 #!/usr/bin/node
-if (isNaN(process.argv[2])) {
-    console.log(0);
-} else if (process.log.length == 3)
-{
-    console.log(0);
-}
+console.log(process.argv.length < 4 ? 0 : process.argv.slice(2).sort((a, b) => b - a)[1]);
