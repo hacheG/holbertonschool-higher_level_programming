@@ -10,6 +10,5 @@ request(url, (err, res, body) => {
 
   fs.appendFile(file, body, (err) => {
     if (err) throw err;
-    console.log('The "data to append" was appended to file!');
   });
 });
