@@ -4,7 +4,6 @@ class Rectangle {
   constructor (w, h) {
     this.width = w;
     this.height = h;
-    this.cambio;
   }
 
   print () {
@@ -17,15 +16,14 @@ class Rectangle {
     }
   }
 
-  rotate() {
-    this.cambio = this.height;
+  rotate () {
+    const cambio = this.height;
     this.height = this.width;
-    this.width = this.cambio;
+    this.width = cambio;
   }
-  
-  double() {
+
+  double () {
     this.height = this.height * 2;
     this.width = this.width * 2;
   }
 };
-  
