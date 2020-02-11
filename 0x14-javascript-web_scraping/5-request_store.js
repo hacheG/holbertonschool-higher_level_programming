@@ -2,11 +2,13 @@
 
 const request = require('request');
 const fs = require('fs');
+const url = process.argv[2];
+const file = process.argv[3];
 
-request('http://loripsum.net/api', (err, res, body) => {
+request(url, (err, res, body) => {
   if (err) { return console.log(err); }
 
-  fs.appendFile('loripsum', body, (err) => {
+  fs.appendFile(file, body, (err) => {
     if (err) throw err;
     console.log('The "data to append" was appended to file!');
   });
