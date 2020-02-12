@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
-request(process.arg[2], { json: true }, (err, res, body) => {
+const url = process.arg[2];
+request(url, { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
   let count = 0;
   let counTen = 0;
